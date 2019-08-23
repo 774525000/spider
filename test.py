@@ -44,7 +44,7 @@ class Html_Spider:
 	#保存数据到数据库
 	def save_data(self, data):
 		sql = "insert into html(pic, link, title, note) values (%s, %s, %s, %s)"
-		item = [data['pic'], data['link'], data['title'], data['link']]
+		item = [data['pic'], data['link'], data['title'], data['note']]
 		self.cursor.execute(sql, [*item])
 		self.conn.commit()
 
